@@ -19,9 +19,21 @@ public class BalancedWords {
         return answer;
     }
 
+    int calculateStringValue(String word){
+        int res = 0;
+        int index = 0;
+        while(index < word.length()){
+            res += (int) word.charAt(index) - 96; // -96 because 97 is the ascii value of a and so forth
+            index ++; 
+        }
+        return res;
+    }
+
     void run(){
         System.out.println(Arrays.toString(splitWord("foo")));
         System.out.println(Arrays.toString(splitWord("bar")));
         System.out.println(Arrays.toString(splitWord("foobar")));
+
+        System.out.println(calculateStringValue("foobar"));
     }
 }
