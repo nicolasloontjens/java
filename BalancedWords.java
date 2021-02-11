@@ -29,11 +29,19 @@ public class BalancedWords {
         return res;
     }
 
+    boolean isBalancedWord(String word){
+        int firstHalf = calculateStringValue(splitWord(word)[0]);
+        int secondHalf = calculateStringValue(splitWord(word)[1]);
+        return firstHalf == secondHalf;
+    }
+
     void run(){
         System.out.println(Arrays.toString(splitWord("foo")));
         System.out.println(Arrays.toString(splitWord("bar")));
         System.out.println(Arrays.toString(splitWord("foobar")));
 
         System.out.println(calculateStringValue("foobar"));
+        System.out.println(isBalancedWord("foobar"));
+        System.out.println(isBalancedWord("lepel"));
     }
 }
