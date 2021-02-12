@@ -1,3 +1,4 @@
+//https://edabit.com/challenge/PZh6svj6RjiQishTG
 public class ProductOfDigitOfSum {
     public static void main(String[] args){
         new ProductOfDigitOfSum().run();
